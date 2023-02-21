@@ -41,6 +41,15 @@
 --  3  D  655.612500
 --  4  E  555.323077
 --
---  >>> Escriba su codigo a partir de este punto <<<
---  
+
+SELECT K0, avg(c21)
+FROM
+(
+	SELECT tbl1.K0, tbl2.c21, tbl1.K1, tbl2.K1
+	FROM tbl1
+	RIGHT JOIN tbl2
+  	ON tbl1.K1 = tbl2.K1
+	WHERE tbl1.c13 > 400
+)
+GROUP BY K0
 
