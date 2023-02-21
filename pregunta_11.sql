@@ -38,3 +38,10 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
+
+-- SELECT YEAR(c14) AS YEAR FROM tbl1
+SELECT SUBSTRING(c14, 1, 4) as YEAR, COUNt(c12) as CANT
+FROM tbl1
+WHERE YEAR = "2018"
+GROUP BY YEAR
+
